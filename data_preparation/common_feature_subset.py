@@ -1,3 +1,6 @@
+# AUTHOR - Joshua Peter Ebenezer
+# DATE OF CREATION - Oct 2nd, 2018
+
 import os
 from collections import Counter
 import string
