@@ -1,6 +1,6 @@
 # Extracts the hold times and latencies and stores them in corresponding
-# folders in Parent/Hold Times and Parent/Latencies folder (make sure these)
-# empty folders are present
+# folders in Parent/Hold Times and Parent/Latencies folder (make sure these
+# empty folders are present)
 
 import os
 from datetime import datetime
