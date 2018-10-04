@@ -51,14 +51,14 @@ def main():
         print()
         for j in range (5):                                       #5 Fold cross validation
             print("Iteration %s:" %j)
-            data_train=data[0]
+            data_train=data[i]
             np.random.shuffle(data_train)            
             sz=int(0.05*data_train.shape[0])+1
             data_train_final=data_train[:-sz]                     #Discarding last 5% entries for training and add them in tesing
             data_test_final=data_train[-sz:] 
             y=np.ones(sz)
             
-            sz=int(0.25*data_train_final.shape[0])-4              #No of test sample needed more for 80:20 ratio
+            sz=int(0.25*data_train_final.shape[0])-sz+1            #No of test sample needed more for 80:20 ratio
             np.random.shuffle(test)                               #Shuffle the whole set for testing
             data_test_final=np.vstack((data_test_final,test[:sz]))
             z=-np.ones(sz)
