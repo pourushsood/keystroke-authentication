@@ -12,5 +12,5 @@ This folder contains code for the preparation of data.
 
 ## classification ##
 
-This folder contains code for classification the data of one user to another
+This folder contains code for training multiple one class SVMs for authentication of the data of each user
 * *one_class_svm.py* - implements one class svm using Radial Basis Function (RBF) of one user and then classifies over other data. This is implemented using Five fold cross validation.
