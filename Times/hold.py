@@ -21,6 +21,12 @@ tdowns =  [item[-23:-2] + '000' for item in KeyDowns]
 letterup =  [item[-25] for item in KeyUps]
 letterdown = [item[-25] for item in KeyDowns]
 
+# For Python 3 and above use the code below
+# tups =  [item[-22:-1] + '000' for item in KeyUps]
+# tdowns =  [item[-22:-1] + '000' for item in KeyDowns]
+# letterup =  [item[-24] for item in KeyUps]
+# letterdown = [item[-24] for item in KeyDowns]
+
 for i in range(0,len(tups)-1):
 	t = i
 	t1 = datetime.strptime(tdowns[i], "%d:%m:%y:%H:%M:%S:%f")
