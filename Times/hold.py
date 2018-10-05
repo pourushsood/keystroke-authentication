@@ -18,8 +18,8 @@ KeyDowns = [x for x in f_list if 'KeyDown' in x]
 # Extracting the timestamp and key (making lists of ups and downs)
 tups =  [item[-23:-2] + '000' for item in KeyUps]
 tdowns =  [item[-23:-2] + '000' for item in KeyDowns]
-letterup =  [item[-25] for item in KeyUps]
-letterdown = [item[-25] for item in KeyDowns]
+letterup =  [item[-25].upper() for item in KeyUps]
+letterdown = [item[-25].upper() for item in KeyDowns]
 
 # For Python 3 and above use the code below
 # tups =  [item[-22:-1] + '000' for item in KeyUps]
