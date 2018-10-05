@@ -8,3 +8,9 @@ The data is provided as hold times for individual keys, and latencies between an
 
 This folder contains code for the preparation of data.
 * *common_feature_subset.py* - finds the common subset of all available features (hold times and latencies)
+
+
+## classification ##
+
+This folder contains code for classification the data of one user to another
+* *one_class_svm.py* - implements one class svm using Radial Basis Function (RBF) of one user and then classifies over other data. This is implemented using Five fold cross validation.
