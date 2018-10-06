@@ -71,22 +71,24 @@ def main():
                 for i in range(len(rollnumbers)):
                 #loop on all the roll numbers
                     roll = rollnumbers[i]
-                    outpath = outdatapath + "\\" + roll
-                    address1 = address + "\\" + roll + "\\" + "Keyboard Database" + "\\" + "sentence"  
-                    # getting the addresses of happy, sad and neutral directories.
-                    address_neutral = address1 + "\\" + "Neutral"
-                    # appending happy.txt, sad.txt, neutral.txt with the data in "dir_path" address_happy, address_sad, address_neutral respectively. 
-                    concatenation(address_neutral, outpath, "neutral.txt")
-                    checkdirectories = os.listdir(address1 + "\\" + "Emotional")
-                    #Since happy and sad directories are present only when user has the data for it in that week. Hence a check is necessary 
-                    if "Happy" in checkdirectories:
-                        address_happy = address1 + "\\" + "Emotional" + "\\" + "Happy"
-                        concatenation(address_happy, outpath, "happy.txt")
-                    if "Sad" in checkdirectories:
-                        address_sad = address1 + "\\" + "Emotional" + "\\" + "Sad"
-                        concatenation(address_sad, outpath, "sad.txt")
+                    addresscheck = address + "\\" + roll
+                    #to determine whether or not that person has taken keyboard data in that week
+                    if len(os.listdir(addresscheck)):
+                        outpath = outdatapath + "\\" + roll
+                        address1 = address + "\\" + roll + "\\" + "Keyboard Database" + "\\" + "sentence"  
+                        # getting the addresses of happy, sad and neutral directories.
+                        address_neutral = address1 + "\\" + "Neutral"
+                        # appending happy.txt, sad.txt, neutral.txt with the data in "dir_path" address_happy, address_sad, address_neutral respectively. 
+                        concatenation(address_neutral, outpath, "neutral.txt")
+                        checkdirectories = os.listdir(address1 + "\\" + "Emotional")
+                        #Since happy and sad directories are present only when user has the data for it in that week. Hence a check is necessary 
+                        if "Happy" in checkdirectories:
+                            address_happy = address1 + "\\" + "Emotional" + "\\" + "Happy"
+                            concatenation(address_happy, outpath, "happy.txt")
+                        if "Sad" in checkdirectories:
+                            address_sad = address1 + "\\" + "Emotional" + "\\" + "Sad"
+                            concatenation(address_sad, outpath, "sad.txt")
         
             
 if __name__=='__main__':
     main()
-    
